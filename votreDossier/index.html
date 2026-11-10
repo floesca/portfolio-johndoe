@@ -93,7 +93,7 @@
                                     <div class="col-2 fw-bold">HTML</div>
 
                                     <div class="col-10">
-                                        <div class="progress my-2" style="height: 20px;">
+                                        <div class="progress my-2" data-bs-toggle="tooltip" data-bs-placement="top" title="90%" style="height: 20px;">
                                             <div class="progress-bar" role="progressbar" style="width: 90%"  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
@@ -103,7 +103,7 @@
                                     <div class="col-2 fw-bold">CSS</div>
 
                                     <div class="col-10">
-                                        <div class="progress my-2" style="height: 20px;">
+                                        <div class="progress my-2" data-bs-toggle="tooltip" data-bs-placement="top" title="85%" style="height: 20px;">
                                             <div class="progress-bar" role="progressbar" style="width: 85%"  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
@@ -113,7 +113,7 @@
                                     <div class="col-2 fw-bold">JS</div>
 
                                     <div class="col-10">
-                                        <div class="progress my-2" style="height: 20px;">
+                                        <div class="progress my-2" data-bs-toggle="tooltip" data-bs-placement="top" title="70%" style="height: 20px;">
                                             <div class="progress-bar" role="progressbar" style="width: 70%"  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
@@ -123,7 +123,7 @@
                                     <div class="col-2 fw-bold">PHP</div>
 
                                     <div class="col-10">
-                                        <div class="progress my-2" style="height: 20px;">
+                                        <div class="progress my-2" data-bs-toggle="tooltip" data-bs-placement="top" title="50%" style="height: 20px;">
                                             <div class="progress-bar" role="progressbar" style="width: 50%"  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
@@ -146,7 +146,7 @@
                                     <div class="col-2 fw-bold">Figma</div>
 
                                     <div class="col-10">
-                                        <div class="progress my-2" style="height: 20px;">
+                                        <div class="progress my-2" data-bs-toggle="tooltip" data-bs-placement="top" title="75%" style="height: 20px;">
                                             <div class="progress-bar" role="progressbar" style="width: 75%"  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
@@ -156,7 +156,7 @@
                                     <div class="col-2 fw-bold">Photoshop</div>
 
                                     <div class="col-10">
-                                        <div class="progress my-2" style="height: 20px;">
+                                        <div class="progress my-2" data-bs-toggle="tooltip" data-bs-placement="top" title="80%" style="height: 20px;">
                                             <div class="progress-bar" role="progressbar" style="width: 80%"  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
@@ -166,7 +166,7 @@
                                     <div class="col-2 fw-bold">Illustrator</div>
 
                                     <div class="col-10">
-                                        <div class="progress my-2" style="height: 20px;">
+                                        <div class="progress my-2" data-bs-toggle="tooltip" data-bs-placement="top" title="70%" style="height: 20px;">
                                             <div class="progress-bar" role="progressbar" style="width: 70%"  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
@@ -378,16 +378,29 @@
                             </div>
 
                             <div class="col-xl-7 offset-xl-1 my-4 px-0">
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="last-name" class="form-label">Votre nom</label>
+                                        <input type="text" class="form-control" id="last-name">
+                                    </div>
+
+                                    <div class="col mb-3">
+                                        <label for="first-name" class="form-label">Votre prénom</label>
+                                        <input type="text" class="form-control" id="first-name">
+                                    </div>
+                                </div>
+
                                 <div class="mb-3">
                                     <label for="email-adress" class="form-label">Votre adresse mail</label>
-                                    <input type="email" class="form-control shadow" id="email-adress" placeholder="name@example.com">
+                                    <input type="email" class="form-control" id="email-adress" placeholder="nom@exemple.com">
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="message-contact" class="form-label">Votre message</label>
-                                    <textarea class="form-control shadow" id="message-contact" rows="3"></textarea>
+                                    <textarea class="form-control" id="message-contact" rows="3"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Envoyer</button>
+
+                                <button type="submit" class="btn btn-primary w-100">Envoyer</button>
                             </div>
 
                         </div>
@@ -404,18 +417,42 @@
                         <p class="bg-primary fs-5 text-white rounded-2 fw-bold mx-1 d-inline p-1">JOHN</p>
                         <p class="fs-5">DOE</p>
                     </div>
+
                     <div class="col-12 col-xl-4 text-center">
-                        <p>Mentions légales</p>
+                        <a data-bs-toggle="modal" data-bs-target="#modalMentionsLegales" style="cursor: pointer;">Mentions légales</a>
+
+                        <div class="modal fade" id="modalMentionsLegales" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel">Mentions Légales</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quis rerum expedita aliquam repellat velit explicabo, asperiores aperiam incidunt maxime ut iste sequi placeat dolor pariatur! Recusandae laborum similique quaerat!</p>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae assumenda eveniet eligendi nostrum vel exercitationem error. Animi non natus dolor reiciendis, adipisci ut sit? Cumque necessitatibus doloribus assumenda accusamus dolorem!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="col-12 col-xl-4 text-end">
-                        <i class="bi bi-linkedin px-1"></i>
+                        <i class="bi bi-linkedin px-1" data-bs-toggle="tooltip" data-bs-placement="top" title="LinkedIn"></i>
 
-                        <i class="bi bi-instagram px-1"></i>
+                        <i class="bi bi-instagram px-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram"></i>
 
-                        <i class="bi bi-twitter px-1"></i>
+                        <i class="bi bi-twitter px-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"></i>
                     </div>
                 </div>
             </div>
         </footer>
 </body>
+
+<script>var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
+
 </html>
